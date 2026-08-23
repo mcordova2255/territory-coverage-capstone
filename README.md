@@ -1,54 +1,56 @@
 # Territory Coverage Capstone — UK & Ireland Enterprise Sales
 
-**Author:** Maria Cordova  
-**Tools:** Python · pandas · matplotlib · Excel  
-**Dataset:** [Kaggle — territory-coverage-capstone](https://www.kaggle.com/datasets/mariacordova/territory-coverage-capstone)  
+**Author:** Maria Cordova
+**Tools:** Python · pandas · matplotlib · Excel
+**Dataset:** [Kaggle — territory-coverage-capstone](https://www.kaggle.com/datasets/mariacordova/territory-coverage-capstone)
 **Notebook:** [Kaggle — territory-coverage-capstone-analysis](https://www.kaggle.com/code/mariacordova/territory-coverage-capstone-analysis)
 
 ---
 
 ## Business Problem
 
-Enterprise sales organisations depend on clean territory coverage to assign accounts correctly, protect active bids, and set fair quotas. When territory data becomes messy — through duplicate ownership, wrong segment assignments, orphaned accounts, or closed entities still marked active — the business risks losing revenue, misaligning resources, and making poor quota decisions.
+Enterprise sales organisations depend on clean territory coverage to assign accounts correctly, protect active bids, and set fair quotas. When territory data becomes messy, through duplicate ownership, wrong segment assignments, orphaned accounts, or closed entities still marked active, the business risks losing revenue, misaligning resources, and making poor quota decisions.
 
-This project simulates a real-world territory coverage audit for a UK & Ireland enterprise sales team operating across four verticals: **FRIS** (Financial Services), **Education**, **Public Sector**, and **Healthcare**.
+This project simulates a territory coverage audit for a UK and Ireland enterprise sales team operating across four verticals: **Financial, Retail and Independent Services**, **Education**, **Public Sector**, and **Healthcare**.
+
+All data in this repository is synthetic. It was generated to model the structure and failure modes of an enterprise coverage dataset. No client or employer data is used anywhere in this project.
 
 ---
 
 ## What This Project Covers
 
-| Area | What Was Analysed |
-|------|-------------------|
-| Account Health | Hierarchy status breakdown across 400 accounts |
-| TAM at Risk | £3.7M of TAM sitting behind misaligned accounts |
-| Active Bid Exposure | 118 accounts with live bids — 80 flagged in alignment issues |
-| Before vs After | Rep-level TAM and quota impact post-cleanup |
-| Territory Optimisation | ST status analysis across 24 territories |
-| Operational Bottlenecks | Case workload and resolution time by team |
+| Area                    | What Was Analysed                                            |
+| ----------------------- | ------------------------------------------------------------ |
+| Account Health          | Hierarchy status breakdown across 400 accounts               |
+| TAM at Risk             | £3.7M of TAM sitting behind misaligned accounts              |
+| Active Bid Exposure     | 118 accounts with live bids, 80 flagged in alignment issues  |
+| Before vs After         | Rep-level TAM and quota impact post-cleanup                  |
+| Territory Optimisation  | Territory status analysis across 24 territories              |
+| Operational Bottlenecks | Case workload and resolution time by team                    |
 
 ---
 
 ## Key Findings
 
-- **57.8% of accounts** had a hierarchy issue at baseline — misaligned, wrong parent, duplicate, orphan, or closed entity
-- **£3.7M TAM at risk** — 56% of the total portfolio sitting behind alignment problems
-- **118 active bid accounts** — 30 rated High severity, meaning live deals were assigned to the wrong rep or territory
+- **57.8% of accounts** had a hierarchy issue at baseline: misaligned, wrong parent, duplicate, orphan, or closed entity
+- **£3.7M TAM at risk**, 56% of the total portfolio sitting behind alignment problems
+- **118 active bid accounts**, 30 rated high severity, meaning live deals were assigned to the wrong rep or territory
 - **£354,000 TAM uplift** unlocked after cleanup across the rep team
-- **37% of correction cases** were still stalled in Submitted or Delayed status — pointing to a process bottleneck, not just a data problem
+- **37% of correction cases** were still stalled in submitted or delayed status, pointing to a process bottleneck rather than only a data problem
 
 ---
 
 ## Dataset Structure
 
-Five relational tables built to simulate a real business operations dataset:
+Five relational tables built to model an enterprise sales operations dataset:
 
-| Table | Rows | Description |
-|-------|------|-------------|
-| `accounts.csv` | 400 | Account master with hierarchy status, TAM, active bid flag |
-| `territories.csv` | 24 | Territory structure with rep assignment, TAM, quota |
-| `reps.csv` | 12 | Rep-level before/after TAM and quota |
-| `account_alignment.csv` | 220 | One row per alignment issue with severity and TAM at risk |
-| `cases.csv` | 260 | Correction workflow with owning team and resolution dates |
+| Table                   | Rows | Description                                                |
+| ----------------------- | ---- | ---------------------------------------------------------- |
+| `accounts.csv`          | 400  | Account master with hierarchy status, TAM, active bid flag |
+| `territories.csv`       | 24   | Territory structure with rep assignment, TAM, quota        |
+| `reps.csv`              | 12   | Rep-level before/after TAM and quota                       |
+| `account_alignment.csv` | 220  | One row per alignment issue with severity and TAM at risk  |
+| `cases.csv`             | 260  | Correction workflow with owning team and resolution dates  |
 
 ---
 
@@ -83,10 +85,8 @@ Five relational tables built to simulate a real business operations dataset:
 ```
 territory-coverage-capstone/
 ├── README.md
-├── notebooks/
-│   └── territory_coverage_analysis.ipynb
-└── outputs/
-    └── territory_coverage_dataset.xlsx
+├── territory_coverage_capstone_notebook.ipynb
+└── territory_coverage_dataset.xlsx
 ```
 
 > The CSV data files are hosted on Kaggle. See the dataset link above.
