@@ -35,7 +35,7 @@ All data in this repository is generated. It models the structure and failure mo
 
 - **42.5% of accounts** carried a hierarchy defect at baseline: misaligned, wrong parent, duplicate, orphan, or a closed entity still marked active
 - **$2.97M TAM at risk**, 28% of the $10.6M modelled portfolio sitting behind alignment problems
-- **119 active bid accounts**, 48 of them carrying alignment issues and 21 rated high severity, meaning $755,700 of live deal value assigned to the wrong rep or territory
+- **119 active bid accounts**, 48 of them carrying alignment issues worth $755,700 of live deal value assigned to the wrong rep or territory, and 21 of those rated high severity accounting for $395,000 of it
 - **Correction moved books in both directions.** Seven rep books fell and five rose, for a net reduction of $210,700 in TAM and $50,500 in quota. Validation that only ever adds value is not validation; the source overstated more often than it missed, and the correction says so
 - **37% of correction cases** were still stalled in submitted or delayed status, pointing to a process bottleneck rather than only a data problem
 - **Territory structure is uneven.** 5 of 24 territories are flagged for consolidation and 3 are over-fragmented, carrying an average of 9 accounts against a book average of 17
